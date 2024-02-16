@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/styles.css" id="main-css">
+    <link rel="stylesheet" href="/styles/styles-sidebar.css" id="css-sidebar">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="dist/hamburgers.css" rel="stylesheet">
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/8906f50d47.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  
+  <nav>
+    <button id="navbar-button" aria-controls="navbar.links" aria-expanded="false">
+      <!-- <span>Menu</span> -->
+      <input id="toggleChecker" type="checkbox">
+      <label id="togglerLable" for="toggleChecker">
+        <div class="checkboxtoggler">
+          <div class="line-1"></div>
+          <div class="line-2"></div>
+          <div class="line-3"></div>
+        </div>
+      </label>
+    </button>
+    
+    
+    <div id="navbar">
+      <div id="navbar-links">
+        <a href="#header-first-content" id="nav-link1"><span>Owner</span></a>
+        <a href="#projects" id="nav-link2"><span>Projects</span></a>
+        <a href="#about-me" id="nav-link3"><span>About me</span></a>
+        <a href="#contact-me" id="nav-link4"><span>Contact me</span></a>
+      </div>
+
+      <div id="dark-ligth">
+        <label class="theme-switch theme-switch-window">
+            <input type="checkbox" class="theme-switch__checkbox" id="checker" checked>
+            <div class="theme-switch__container">
+              <div class="theme-switch__clouds"></div>
+              <div class="theme-switch__stars-container">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 55" fill="none">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M135.831 3.00688C135.055 3.85027 134.111 4.29946 133 4.35447C134.111 4.40947 135.055 4.85867 135.831 5.71123C136.607 6.55462 136.996 7.56303 136.996 8.72727C136.996 7.95722 137.172 7.25134 137.525 6.59129C137.886 5.93124 138.372 5.39954 138.98 5.00535C139.598 4.60199 140.268 4.39114 141 4.35447C139.88 4.2903 138.936 3.85027 138.16 3.00688C137.384 2.16348 136.996 1.16425 136.996 0C136.996 1.16425 136.607 2.16348 135.831 3.00688ZM31 23.3545C32.1114 23.2995 33.0551 22.8503 33.8313 22.0069C34.6075 21.1635 34.9956 20.1642 34.9956 19C34.9956 20.1642 35.3837 21.1635 36.1599 22.0069C36.9361 22.8503 37.8798 23.2903 39 23.3545C38.2679 23.3911 37.5976 23.602 36.9802 24.0053C36.3716 24.3995 35.8864 24.9312 35.5248 25.5913C35.172 26.2513 34.9956 26.9572 34.9956 27.7273C34.9956 26.563 34.6075 25.5546 33.8313 24.7112C33.0551 23.8587 32.1114 23.4095 31 23.3545ZM0 36.3545C1.11136 36.2995 2.05513 35.8503 2.83131 35.0069C3.6075 34.1635 3.99559 33.1642 3.99559 32C3.99559 33.1642 4.38368 34.1635 5.15987 35.0069C5.93605 35.8503 6.87982 36.2903 8 36.3545C7.26792 36.3911 6.59757 36.602 5.98015 37.0053C5.37155 37.3995 4.88644 37.9312 4.52481 38.5913C4.172 39.2513 3.99559 39.9572 3.99559 40.7273C3.99559 39.563 3.6075 38.5546 2.83131 37.7112C2.05513 36.8587 1.11136 36.4095 0 36.3545ZM56.8313 24.0069C56.0551 24.8503 55.1114 25.2995 54 25.3545C55.1114 25.4095 56.0551 25.8587 56.8313 26.7112C57.6075 27.5546 57.9956 28.563 57.9956 29.7273C57.9956 28.9572 58.172 28.2513 58.5248 27.5913C58.8864 26.9312 59.3716 26.3995 59.9802 26.0053C60.5976 25.602 61.2679 25.3911 62 25.3545C60.8798 25.2903 59.9361 24.8503 59.1599 24.0069C58.3837 23.1635 57.9956 22.1642 57.9956 21C57.9956 22.1642 57.6075 23.1635 56.8313 24.0069ZM81 25.3545C82.1114 25.2995 83.0551 24.8503 83.8313 24.0069C84.6075 23.1635 84.9956 22.1642 84.9956 21C84.9956 22.1642 85.3837 23.1635 86.1599 24.0069C86.9361 24.8503 87.8798 25.2903 89 25.3545C88.2679 25.3911 87.5976 25.602 86.9802 26.0053C86.3716 26.3995 85.8864 26.9312 85.5248 27.5913C85.172 28.2513 84.9956 28.9572 84.9956 29.7273C84.9956 28.563 84.6075 27.5546 83.8313 26.7112C83.0551 25.8587 82.1114 25.4095 81 25.3545ZM136 36.3545C137.111 36.2995 138.055 35.8503 138.831 35.0069C139.607 34.1635 139.996 33.1642 139.996 32C139.996 33.1642 140.384 34.1635 141.16 35.0069C141.936 35.8503 142.88 36.2903 144 36.3545C143.268 36.3911 142.598 36.602 141.98 37.0053C141.372 37.3995 140.886 37.9312 140.525 38.5913C140.172 39.2513 139.996 39.9572 139.996 40.7273C139.996 39.563 139.607 38.5546 138.831 37.7112C138.055 36.8587 137.111 36.4095 136 36.3545ZM101.831 49.0069C101.055 49.8503 100.111 50.2995 99 50.3545C100.111 50.4095 101.055 50.8587 101.831 51.7112C102.607 52.5546 102.996 53.563 102.996 54.7273C102.996 53.9572 103.172 53.2513 103.525 52.5913C103.886 51.9312 104.372 51.3995 104.98 51.0053C105.598 50.602 106.268 50.3911 107 50.3545C105.88 50.2903 104.936 49.8503 104.16 49.0069C103.384 48.1635 102.996 47.1642 102.996 46C102.996 47.1642 102.607 48.1635 101.831 49.0069Z" fill="currentColor"></path>
+                </svg>
+              </div>
+              <div class="theme-switch__circle-container">
+                <div class="theme-switch__sun-moon-container">
+                  <div class="theme-switch__moon">
+                    <div class="theme-switch__spot"></div>
+                    <div class="theme-switch__spot"></div>
+                    <div class="theme-switch__spot"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </label>
+      </div>
+    </div>
+  </nav>
+
+  <header> 
+    <div id="header-background-filter"></div>
+
+    <section id="header-first-content">
+      <div id="header-content">
+        <h1>Mauricio Lovo</h1>
+        <h2>Full Stack Developer | Data Scientist</h2>
+        <button onclick="document.location='#contact-me'" id="button-header">CONTACT ME</button>
+      </div>
+      <div id="image-header">
+          <img src="./Material/M. Lovo.png">
+      </div>
+    </section>
+
+  </header>
+
+  <main>
+
+    <div id="projects">
+
+      <h1>Projects</h1>
+      <div id="display-projects">
+        <div id="carrousel-container">
+           <div id="carrousel">
+
+            <div id="first-project" class="cards-projects">
+              <section class="card-projects-info">
+                <h2>Color Palette Page</h2>
+                <p>This is one page that contains info about color palettes, font styles and additionally, websites where you can find free resources of these to use in your projects.</p>
+                <div class="links-projects">
+                  <button onclick="window.open('https://rs-hades.github.io/ChallengeProjectTwo/', '_blank')" class="link-projects-webpage" onclick="location.href=''" target="_blank">Visit Website</button>
+                  <a href="https://github.com/RS-Hades/ChallengeProjectTwo.git" target="_blank" class="link-projects-github"><i class="bi bi-github"></i></a>
+                </div>
+                <div class="technologies-projects">
+                  <h4>Technologies:</h4>
+                  <section class="technologie-list">
+                    <div class="technologie">
+                      <i class="fa-brands fa-html5 tech-html"></i>
+                      <span class="tooltip-projects tooltip-invert-smaller">HTML</span>
+                    </div>
+                    <div class="technologie">
+                      <i class="fa-brands fa-css3-alt tech-css"></i>
+                      <span class="tooltip-projects tooltip-invert-smaller">CSS</span>
+                    </div>
+                  </section>
+                </div>
+              </section>
+              <div class="card-projects-img">
+                <img src="./Material/first-project.png" >
+              </div>
+            </div>
+
+            <div id="second-project"  class="cards-projects">
+              <section class="card-projects-info">
+                <h2>Tea Cozzy</h2>
+                <p>This website is for a fictional tea shop called Tea Cozzy, which contains info about its mission, some  of the teas that there are, and finally the locations.</p>
+                <div class="links-projects">
+                  <button onclick="window.open('https://rs-hades.github.io/3rd-Project/', '_blank')" class="link-projects-webpage">Visit Website</button>
+                  <a target="_blank" href="https://github.com/RS-Hades/3rd-Project.git" class="link-projects-github"><i class="bi bi-github"></i></a>
+                </div>
+                <div class="technologies-projects">
+                  <h4>Technologies:</h4>
+                  <section class="technologie-list">
+                    <div class="technologie">
+                      <i class="fa-brands fa-html5 tech-html"></i>
+                      <span class="tooltip-projects tooltip-invert-smaller">HTML</span>
+                    </div>
+                    <div class="technologie">
+                      <i class="fa-brands fa-css3-alt tech-css"></i>
+                      <span class="tooltip-projects tooltip-invert-smaller">CSS</span>
+                    </div>
+                  </section>
+                </div>
+              </section>
+              <div class="card-projects-img">
+                <img src="./Material/second-project.png" >
+              </div>
+            </div>
+
+            <div id="third-project" class="cards-projects">
+              <section class="card-projects-info">
+                <h2>Codikin&lt;/&gt;</h2>
+                <p>This is a website for a fictional company that hires programmers around the world, it includes the mission, the projects that the company's team has made, why you should work there by experiences of developers and finally a form to apply for a job.</p>
+                <div class="links-projects">
+                  <button class="link-projects-webpage" onclick="window.open('https://rs-hades.github.io/4th-project/', '_blank')">Visit Website</button>
+                  <a href="https://github.com/RS-Hades/4th-project.git" target="_blank" class="link-projects-github"><i class="bi bi-github"></i></a>
+                </div>
+                <div class="technologies-projects">
+                  <h4>Technologies:</h4>
+                  <section class="technologie-list">
+                    <div class="technologie">
+                      <i class="fa-brands fa-html5 tech-html"></i>
+                      <span class="tooltip-projects tooltip-invert">HTML</span>
+                    </div>
+                    <div class="technologie">
+                      <i class="fa-brands fa-css3-alt tech-css"></i>
+                      <span class="tooltip-projects tooltip-invert">CSS</span>
+                    </div>
+                  </section>
+                </div>
+              </section>
+              <div class="card-projects-img">
+                <img src="./Material/third-project.png" >
+              </div>
+            </div>
+
+            <div id="fourth-project" class="cards-projects">
+              <section class="card-projects-info">
+                <h2>Guardians of the Nature</h2>
+                <p>This website is for a fictional club about biology, where you can know who are the Guardians of the Nature, about their mission with the world, discover about their adventures to know what they do, and finally a section to apply to be part of the club.</p>
+                <div class="links-projects">
+                  <button class="link-projects-webpage" onclick="window.open('https://rs-hades.github.io/Fifth-Project/', '_blank')">Visit Website</button>
+                  <a href="https://github.com/RS-Hades/Fifth-Project.git" target="_blank" class="link-projects-github"><i class="bi bi-github"></i></a>
+                </div>
+                <div class="technologies-projects">
+                  <h4>Technologies:</h4>
+                  <section class="technologie-list">
+                    <div class="technologie">
+                      <i class="fa-brands fa-html5 tech-html"></i>
+                      <span class="tooltip-projects tooltip-invert">HTML</span>
+                    </div>
+                    <div class="technologie">
+                      <i class="fa-brands fa-css3-alt tech-css"></i>
+                      <span class="tooltip-projects tooltip-invert">CSS</span>
+                    </div>
+                  </section>
+                </div>
+              </section>
+              <div class="card-projects-img">
+                <img src="./Material/fourth-project.png" >
+              </div>
+            </div>
+          </div>
+        </div>
+
+              
+
+        <button class="buttons-projects" id="button-projects-left"><i class="bi bi-caret-left-fill"></i></button>
+        <button class="buttons-projects" id="button-projects-right"><i class="bi bi-caret-right-fill"></i></button>
+                
+              
+      </div>
+    </div>
+
+    <div id='about-me'>
+      
+      <section id="who-is-mauri">
+        <div id="who-is-info">
+          <h1>About me</h1>
+          <h2>Who is Mauri?</h2>
+          <p>I'm a full stack developer and data scientist from El Salvador 💻</p>
+          <p>Talking a little bit about my person, I've been in a digital environment all of my life due to I always had devices where I could learn a lot of things from the digital world so I can learn everything about and from the internet in the fastest way.</p>
+        </div>
+      </section>
+
+      <section id="general-info-about">
+        <div id="general-info-photo">
+          <img src="./Material/photo-general-info.jpg" alt="">
+        </div>
+        <div id="general-info">
+          <h2>Education</h2>
+          <p>I've learned all about my knowledge in the programming world from platforms like Codecademy, Datacamp and freeCodeCamp, following their roadmap about what to learn, also I've dedicated my time to develop own projects to show my abilities in a better way.</p>
+          <h2>Professional experience</h2>
+          <p>I've not worked in a formal job until this moment, but I hope to be helpful for you with my experience earned thanks to the projects I've developed.</p>
+        </div>
+      </section>
+
+      <section id="about-skills">
+        <div id="skills-main-title">
+          <h2>Main Skills</h2>
+        </div>
+        <div id="display-skills">
+          <div id="skills-container">
+            <div id="skills-slider">
+              
+              
+              <div class="kinda-skill">
+                <div class="title-of-kinda">
+                  <h3>Full Stack Skills</h3>
+                </div>
+                <div class="category-skills">
+                  <div class="skill-container">
+                    <i class="fa-brands fa-html5"></i>
+                    <p>HTML</p>
+                  </div>
+                  <div class="skill-container">
+                    <i class="fa-brands fa-css3-alt"></i>
+                    <p>CSS</p>
+                  </div>
+                  <div class="skill-container">
+                    <i class="fa-brands fa-js"></i>
+                    <p>JavaScript</p>
+                  </div>
+                  <div class="skill-container">
+                    <i class="fa-brands fa-angular"></i>
+                    <p>Angular</p>
+                  </div>
+                </div>
+              </div>
+
+
+              <div id="data-skills" class="kinda-skill">
+                <div class='title-of-kinda'>
+                  <h3>Data Scientist Skills</h3>
+                </div>
+                <div class="category-skills">
+                  <div class="skill-container">
+                    <i class="fa-solid fa-database"></i>
+                    <p>MySQL</p>
+                  </div>
+                  <div class="skill-container">
+                    <i class="fa-brands fa-python"></i>
+                    <p>Python</p>
+                  </div>
+                </div>
+              </div>
+
+
+              <div id="control-skills" class="kinda-skill">
+                <div class='title-of-kinda'>
+                  <h3>Control Version Skills</h3>
+                </div>
+                <div class="category-skills">
+                  <div class="skill-container">
+                    <i class="fa-brands fa-git-alt"></i>
+                    <p>Git</p>
+                  </div>
+                  <div class="skill-container">
+                    <i class="fa-brands fa-github"></i>
+                    <p>GitHub</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <button class="buttons-skills" id="about-first-button"><i class="bi bi-caret-left-fill"></i></button>
+          <button class="buttons-skills" id="about-second-button"><i class="bi bi-caret-right-fill"></i></button>
+
+        </div>
+      </section>
+
+    </div>
+
+    <div id="contact-me">
+      
+      <div id="contact-me-container">
+        <div id="contact-inback"></div>
+
+        <div id="contact-infront">
+          <h1>Contact me</h1>
+          <form action="https://formspree.io/f/xyyreowo" method="post">
+            <h2>By a message!</h2>
+            <input type="input" name='name' class="contact-input" placeholder="Name" required="" maxlength="30" minlength="3">
+            <input type="email" name="email" class="contact-input" placeholder="Email" required="" maxlength="30">
+            <textarea name="message" placeholder='I wanna say you...' class="contact-input" required="" maxlength="250" minlength="3"></textarea>
+            <button id="send-button" type="submit">Send 📧</button>
+          </form>
+          <hr class="contact-break">
+          <h2>By email!</h2>
+          <div id="contact-email">
+            <span id="contact-link-email">lovomau219@gmail.com</span>
+            <span id="copy-button">Copy</span> 
+          </div>
+          <hr class="contact-break">
+          
+          <div id="contact-socialmedia">
+            <h2>By social media!</h2>
+            <div id="container-button-media">
+              <div class="media-button">
+                <button onclick="window.open('https://github.com/RS-Hades', '_blank')" class="btn">
+                  <svg width="40" height="40" fill="#0092E4" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 24 24" id="github">
+                    <path d="M12,2.2467A10.00042,10.00042,0,0,0,8.83752,21.73419c.5.08752.6875-.21247.6875-.475,0-.23749-.01251-1.025-.01251-1.86249C7,19.85919,6.35,18.78423,6.15,18.22173A3.636,3.636,0,0,0,5.125,16.8092c-.35-.1875-.85-.65-.01251-.66248A2.00117,2.00117,0,0,1,6.65,17.17169a2.13742,2.13742,0,0,0,2.91248.825A2.10376,2.10376,0,0,1,10.2,16.65923c-2.225-.25-4.55-1.11254-4.55-4.9375a3.89187,3.89187,0,0,1,1.025-2.6875,3.59373,3.59373,0,0,1,.1-2.65s.83747-.26251,2.75,1.025a9.42747,9.42747,0,0,1,5,0c1.91248-1.3,2.75-1.025,2.75-1.025a3.59323,3.59323,0,0,1,.1,2.65,3.869,3.869,0,0,1,1.025,2.6875c0,3.83747-2.33752,4.6875-4.5625,4.9375a2.36814,2.36814,0,0,1,.675,1.85c0,1.33752-.01251,2.41248-.01251,2.75,0,.26251.1875.575.6875.475A10.0053,10.0053,0,0,0,12,2.2467Z"></path>
+                  </svg>
+                </button>
+              </div>
+
+              <div class="media-button">
+                <button onclick="window.open('https://discordapp.com/users/634525808589013002', '_blank')" class="btn">
+                  <svg id="github" viewBox="0 0 24 24" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" fill="#0092E4" height="40" width="40">
+                      <path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      
+    </div>
+
+    <a href="#" id="back-top">
+      <span><i class="bi bi-arrow-up-short"></i></span>
+    </a>
+  </main>
+
+
+  <footer>
+    <h2>Thanks for watch my webpage :D</h2>
+  </footer>
+    
+  <script src="./JS-code/script-sidebar.js"></script>
+  <script src="./JS-code/script.js"></script>
+  <script src="./JS-code/script-carrousel.js"></script>
+  <script src="./JS-code/script-slider.js"></script>
+</body>
+</html>

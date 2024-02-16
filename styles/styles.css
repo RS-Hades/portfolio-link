@@ -1,0 +1,1939 @@
+/* UNIVERSAL STYLES  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #c4c4c4;
+    width: 100%;
+}
+* {
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+:root {
+    --main-color: #12012d;
+    --complementary-color: #F2E6D0;
+    --carrousel-transform: 0%;
+    --transition-carrousel: transform 0.5s;
+    --second-color: #ffd91b;
+    --third-color: #d2b1e4;
+    --fourth-color: #3f1777;
+    --sixth-color: #F235B0;
+    --sub-color: #170137;
+    --complementary-subcolor: #F2E6D0;
+    --slider-transform: 0%;
+    --transition-slider: transform 0.5s;
+}
+
+
+/* MAIN SECTION: HEADER !!!!!!!!!!!!!!!!!!!!!!!*/
+header {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-top: 50px;
+}
+#header-background-filter {
+    position: absolute;
+    width: 100%;
+    height: 110%;
+    top: -50px;
+    overflow: hidden;
+    z-index: -1;
+    background: url(./../Material/background-dark-header.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(5px);
+}
+.light-theme #header-background-filter {
+    background: url(./../Material/background-light-header.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(5px);
+}
+#header-first-content {
+    padding-top: 15px;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr;
+}
+#header-content {
+    grid-column: 1 / 5;
+    grid-row: 1 / -1;
+    z-index: 1;
+    align-self: center;
+    margin: 0px 0 0 30px;
+    color: var(--complementary-color);
+    padding-bottom: 150px;
+}
+#header-content h1 {
+    font-size: 50px;
+    line-height: 50px;
+    margin: 0;
+    color: var(--second-color)
+}
+.light-theme #header-content h1 {
+    /* color: #F235B0; */
+    color: #3f1777
+    /* color: #ffd91b; */
+    /* color: #12012d; */
+}
+#header-content h2 {
+    font-size: 20px;
+    margin: 0;
+}
+#image-header {
+    grid-column: 3 / -1;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    grid-row: 1 / -1;
+}
+#image-header img {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    object-fit: cover;
+    object-position: 100%;
+    overflow: visible;
+}
+#button-header {
+    width: 45%;
+    height: auto;
+    border: 3px solid var(--sixth-color);
+    /* to see the color of the border of the button
+    also there is a property in the @media of 840px 
+    that set the color*/
+    padding: 4px 0;
+    border-radius: 45px;
+    transition: all 0.3s;
+    cursor: pointer;
+    background: white;
+    font-size: 16px;
+    font-weight: 550;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 20px;
+}
+#button-header:hover {
+    background: var(--sixth-color);
+    color: white;
+    font-size: 18px;
+}
+.light-theme #button-header {
+    border: 3px solid var(--second-color)
+}
+.light-theme #button-header:hover {
+    background-color: var(--second-color);
+    color: var(--complementary-color)
+}
+
+
+main {
+    width: 100%;
+    height: auto;
+}
+/* MAIN SECTION: PROJECTS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+#projects {
+    height: auto;
+    width: 100%;
+    position: relative;
+    padding: 80px 0px 100px 0;
+    background-color: var(--main-color);
+    /* background: linear-gradient(180deg, rgb(226, 173, 0) 20%, rgb(173, 145, 5) 80%); */
+}
+.light-theme #projects {
+    background-color: var(--third-color);
+}
+#projects h1 {
+    font-size: 60px;
+    margin: 0px 0 40px 0;
+    line-height: 60px;
+    text-align: center;
+    color: var(--complementary-color);
+}
+#display-projects {
+    width: 98%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: 1fr;
+}
+#carrousel-container {
+    width: 99%;
+    overflow: hidden;
+    justify-self: center;
+    border-radius: 10px;
+    grid-column: 2 / 20;
+}
+#carrousel {
+    display: flex;
+    transform: translateX(var(--carrousel-transform));
+    transition: var(--transition-carrousel);
+}
+.cards-projects {
+    min-width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+}
+.card-projects-info {
+    grid-column: 1 / 12;
+    height: 100%;
+    padding: 15px 10px 15px 15px;
+}
+.card-projects-info h2 {
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 900;
+    margin: 0;
+}
+.card-projects-info p {
+    font-size: 16px;
+    line-height: 16px;
+    margin: 10px 0 15px 0;
+    font-weight: 500;
+}
+.links-projects {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.link-projects-webpage {
+    padding: 5px 10px;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+.link-projects-webpage:hover {
+    color: black;
+}
+.link-projects-webpage:after {
+    content: "";
+    background: white;
+    position: absolute;
+    z-index: -1;
+    left: -20%;
+    right: -20%;
+    top: 0;
+    bottom: 0;
+    transform: skewX(-45deg) scale(0, 1);
+    transition: all 0.8s;
+}
+.link-projects-webpage:hover:after {
+    transform: skewX(-45deg) scale(1, 1);
+    -webkit-transition: all 0.8s;
+    transition: all 0.8s;
+}
+.link-projects-github {
+    font-size: 28px;
+    cursor: pointer;
+    color: black;
+    transition: color 0.4s;
+    text-decoration: none;
+}
+.link-projects-github:hover {
+    color: rgb(94, 4, 99);
+}
+.technologies-projects {
+    width: 100%;
+    height: auto;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    margin-top: 15px;
+}
+.technologies-projects h4 {
+    font-size: 18px;
+    margin: 0;
+}
+.technologie-list {
+    display: flex;
+}
+.technologie {
+    position: relative;
+    padding: 0 15px 0 15px;
+    font-size: 28px;
+}
+.technologie span {
+    display: none;
+    visibility: hidden;
+    position: absolute;
+    opacity: 0;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 18px;
+    background-color: var(--fourth-color);
+    color: var(--second-color);
+    left: 50%;
+    transform: translateX(-50%);
+    top: 130%;
+    z-index: 5;
+    transition: all 1s;
+}
+.technologie span:before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent transparent var(--fourth-color) transparent;
+}
+.technologie .tooltip-invert {
+    top: auto;
+    bottom: 130%;
+}
+.technologie .tooltip-invert:before {
+    top: 100%;
+    bottom: auto;
+    border-color: var(--fourth-color) transparent transparent transparent;
+}
+.technologie:hover span {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+}
+.tech-html, .tech-css {
+    transition: color 300ms;
+}
+.technologie:hover .tech-html {
+    color: rgb(255, 157, 0);
+}
+.technologie:hover .tech-css {
+    color: rgb(9, 86, 211);
+}
+.card-projects-img {
+    grid-column: 12 / -1;
+    display: flex;
+    align-items: center;
+    padding-right: 5px;
+}
+.card-projects-img img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+#first-project {
+    background-color: #37CDE9;
+}
+#second-project {
+    background-color: #DDEEF5;
+}
+#third-project {
+    background-color: #A081DE;
+}
+#fourth-project {
+    background-color: #98D996;
+}
+
+.buttons-projects {
+ width: 80%;
+ height: 25%;
+ font-size: 26px;
+ font-weight: 600;
+ grid-row: 1 / -1;
+ z-index: 2;
+ align-self: center;
+ justify-self: center;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ border: 1px solid white;
+ color: white;
+ background-color: rgba(255, 255, 255, 0.151);
+ position: relative;
+ border-radius: 3px;
+}
+.light-theme .buttons-projects {
+    border: 1px solid var(--complementary-color);
+}
+.buttons-projects::before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, var(--sixth-color) 20%, var(--second-color) 80%);
+    filter: blur(5px);
+    transition: 0.3s;
+    border-radius: 3px;
+}
+.light-theme .buttons-projects::before {
+    background: linear-gradient(180deg, var(--complementary-color) 20%, var(--fourth-color) 80%);
+}
+.buttons-projects:hover::before {
+    filter: blur(0px);
+}
+#button-projects-left {
+    grid-column: 1 / 2;
+}
+#button-projects-right {
+    grid-column: 20 / -1;
+}
+
+
+/* MAIN SECTION: ABOUT ME - WHO IS MAURI? !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+#who-is-mauri {
+    width: auto;
+    height: auto;
+    padding: 90px 0 90px 15px;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    justify-content: start;
+    align-items: center;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1) 75%), url(./../Material/photo-who-is.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#who-is-info {
+    height: auto;
+    color: white;
+}
+#who-is-info h1 {
+    margin: 0;
+    font-size: 65px;
+    line-height: 55px;
+}
+#who-is-info h2 {
+    margin: 20px 0 0 0;
+    font-size: 28px;
+}
+#who-is-info p {
+    margin: 0;
+    font-size: 17px;
+}
+#who-is-info p:first-of-type {
+    margin: 5px 0 25px 0;
+}
+/* MAIN SECTION: ABOUT ME - GENERAL INFO ABOUT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+#general-info-about {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 52% 45%;
+    grid-template-rows: 1fr;
+    gap: 3%;
+    padding: 45px 20px;
+    background-color: var(--main-color);
+}
+.light-theme #general-info-about {
+    background-color: var(--sixth-color);
+}
+#general-info-photo {
+    width: 100%;
+    height: 100%;
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+    border-radius: 15px;
+    overflow: hidden;
+}
+#general-info-about img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#general-info {
+    width: 100%;
+    height: 100%;
+    padding: 20px 20px 20px 20px;
+    grid-column: 2 / -1;
+    grid-row: 1 / -1;
+    background-color: var(--fourth-color);
+    color: var(--complementary-color);
+    border-radius: 15px;
+}
+.light-theme #general-info {
+    background-color: var(--main-color);
+}
+#general-info h2 {
+    margin: 0;
+    font-size: 26px;
+}
+#general-info p {
+    margin: 10px 0 20px 0;
+    font-size: 17px;
+}
+#general-info p:last-of-type {
+    margin-bottom: 0px;
+}
+/* MAIN SECTION: ABOUT ME - MAIN SKILLS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+#about-skills {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    height: auto;
+    background-color: var(--second-color);
+    padding: 25px 2px 35px 2px;
+}
+#skills-main-title h2 {
+    margin: 0;
+    font-size: 48px;
+    text-align: center;
+}
+#display-skills {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 8% 84% 8%;
+    grid-template-rows: 1fr;
+}
+#skills-container {
+    grid-column: 2 / 3;
+    width: 100%;
+    height: auto;
+    align-self: center;
+    grid-row: 1 / -1;
+    border-radius: 10px;
+    overflow: hidden;
+}
+#skills-slider {
+    width: auto;
+    display: flex;
+    transform: translateX(var(--slider-transform));
+    transition: var(--transition-slider);
+}
+.kinda-skill {
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: auto;
+    background-color: var(--sub-color);
+    color: var(--complementary-subcolor);
+    padding: 20px 0 20px 25px;
+}
+.kinda-skill h3 {
+    font-size: 24px;
+    margin: 0;
+}
+.category-skills {
+    display: flex;
+    gap: 20px;
+}
+.skill-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    /* padding: 10px 5px 20px 5px; */
+}
+.skill-container i {
+    font-size: 29px;
+}
+.skill-container p {
+    margin: 0;
+    font-size: 18px;
+}
+.buttons-skills {
+    width: 75%;
+    height: 50%;
+    font-size: 24px;
+    font-weight: 600;
+    display: grid;
+    place-content: center;
+    background-color: rgba(255, 255, 255, 0.151);
+    justify-self: center;
+    align-self: center;
+    position: relative;
+    border-radius: 5px;
+    border: 1px solid white;
+}
+.buttons-skills {
+    border: 1px solid var(--complementary-color)
+}
+.buttons-skills i {
+    z-index: 3;
+    color: var(--complementary-color)
+}
+.expanded .buttons-skills i {
+    z-index: 1;
+}
+.buttons-skills::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, var(--sixth-color), var(--fourth-color));
+    filter: blur(5px);
+    transition: 0.3s;
+    border-radius: 3px;
+}
+.light-theme .buttons-skills::before {
+    background: linear-gradient(180deg, var(--sixth-color), var(--third-color));
+}
+.buttons-skills:hover::before {
+    filter: blur(0px);
+}
+#about-first-button {
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+}
+#about-second-button {
+    grid-column: 3 / -1;
+    grid-row: 1 / -1;
+}
+
+/* MAIN SECTION: CONTACT ME !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+#contact-me {
+    width: 100%;
+    padding: 100px 15px 100px 25px;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    background-image: url(./../Material/background-dark-bottom.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.light-theme #contact-me {
+    background-image: url(./../Material/background-light-bottom.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.contact-break {
+    border: 2px solid var(--fourth-color);
+    margin: 0;
+    margin: 30px 0 30px 0;
+}
+.light-theme .contact-break {
+    border: 2px solid var(--third-color)
+}
+#contact-me-container {
+    position: relative;
+    grid-column: 1 / 2;
+    width: auto;
+    height: auto;
+}
+#contact-inback {
+    position: absolute;
+    width: 103%;
+    height: 102%;
+    background-color: var(--fourth-color);
+    top: 50%;
+    left: 50%;
+    z-index: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+}
+.light-theme #contact-inback {
+    background-color: var(--third-color);
+}
+#contact-infront {
+    background-color: var(--main-color);
+    color: var(--complementary-color);
+    position: relative;
+    padding: 20px 15px 35px 15px;
+    border-radius: 15px;
+    z-index: 2;
+}
+.light-theme #contact-infront {
+    background-color: var(--main-color);
+    color: var(--complementary-color);
+}
+#contact-me h1 {
+    font-size: 35px;
+    text-align: center;
+    margin: 0 0 10px 0;
+}
+#contact-me h2 {
+    margin: 5px 0;
+    font-size: 23px;
+}
+#contact-me form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.contact-input {
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px 15px;
+    background-color: transparent;
+    border: 2px solid rgb(56, 56, 56);
+    transition: 300ms;
+    color: white;
+}
+.light-theme .contact-input {
+    color: var(--complementary-color)
+}
+.contact-input::placeholder {
+    color: rgb(159, 159, 159);
+}
+.light-theme .contact-input::placeholder {
+    color: rgb(77, 77, 77)
+}
+.contact-input:focus {
+    border: 2px solid var(--second-color); 
+    background-color: rgb(29, 29, 29);
+    outline: none;
+}
+.light-theme .contact-input:focus {
+    border: 2px solid var(--sixth-color);
+    background-color: var(--complementary-color);
+    color: white;
+}
+#contact-me form button {
+    width: 35%;
+    font-size: 18px;
+    padding: 5px 5px;
+    margin-top: 10px;
+    display: grid;
+    align-self: center;
+    place-items: center;
+    border-radius: 10px;
+    border: 0;
+    background-color: var(--fourth-color);
+    color: var(--complementary-color);
+    cursor: pointer
+}
+.light-theme #contact-me form button {
+    background-color: var(--sixth-color);
+}
+#contact-email {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    align-items: center;
+    border-radius: 5px;
+    background-color: var(--complementary-color);
+}
+#contact-link-email {
+    height: auto;
+    padding: 12px 10px;
+    font-size: 18px;
+    border-radius: 5px 0px 0px 5px;
+    overflow-x: scroll;
+    border: 2px solid var(--complementary-color);
+    border-right: 0px;
+    background-color: var(--main-color);
+}
+#contact-link-email::-webkit-scrollbar {
+    display: none;
+}
+#copy-button {
+    display: grid;
+    place-content: center;
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--main-color);
+    cursor: pointer;
+    height: 100%;
+    border-radius: 0px 5px 5px 0px;
+    background-color: var(--complementary-color);
+}
+#contact-socialmedia {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    margin: 35px 0 0px 0;
+}
+#container-button-media {
+    display: flex;
+    gap: 30px;
+}
+.media-button:first-child {
+    margin-right: -10px;
+}
+
+
+/* github and discord buttons */
+.btn {
+    display: grid;
+    place-items: center;
+    background: var(--complementary-color);
+    padding: 4px;
+    border-radius: 10px;
+    box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),
+            -6px -6px 10px -1px rgba(255,255,255,0.7);
+    border: 1px solid rgba(0,0,0,0);
+    cursor: pointer;
+    transition: transform 0.5s;
+    
+}
+.light-theme .btn {
+    background: var(--sixth-color)
+}
+.btn:hover {
+    box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
+            inset -4px -4px 6px -1px rgba(255,255,255,0.7),
+            -0.5px -0.5px 0px rgba(255,255,255,1),
+            0.5px 0.5px 0px rgba(0,0,0,0.15),
+            0px 12px 10px -10px rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,0,0,0.1);
+    transform: translateY(0.5em);
+}
+.btn svg {
+    transition: transform 0.5s;
+    transform: scale(0.8);
+    fill: var(--fourth-color)
+}
+.light-theme .btn svg {
+    fill: var(--complementary-color)
+}
+.btn:hover svg {
+    transform: scale(0.6);
+    fill: #333333;
+}
+
+/* BACK TO TOP BUTTON !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1 */
+#back-top {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 9999999999999999999999;
+    padding: 2px 3px;
+    background-color: rgba(255,255,255,0.2);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    color: white;
+    display: grid;
+    place-content: center;
+    text-decoration: none;
+    animation: scroll-way auto linear;
+    animation-timeline: scroll(root);
+}
+#back-top span {
+    font-size: 55px;
+    font-weight: 900;
+    transition: 0.3s ease-in-out;
+}
+#back-top:hover {
+    cursor: pointer;
+}
+#back-top:hover span {
+    transform: translateY(-6px);
+}
+
+/* little setting for the footer */
+footer {
+    height: 120px;
+    background-color: var(--main-color);
+    font-size: 16px;
+    display: grid;
+    place-content: center;
+    color: var(--complementary-color);
+}
+.light-theme footer {
+    background-color: var(--second-color);
+}
+
+/* @MEDIA FOR SMALLER SIZES !!!!!!!!!!!!!!!!!!!!!!!!! */
+@media only screen and (max-width: 610px) {
+    #back-top {
+        display: none;
+    }
+}
+@media only screen and (max-width: 580px) {
+    .cards-projects {
+        grid-template-rows: 55% 45%;
+        grid-template-columns: 1fr;
+    }
+    .card-projects-info {
+        grid-column: 1 / -1;
+        grid-row: 2 / -1;
+        width: 100%;
+        padding: 5px 10px 25px 15px;
+    }
+    .technologie .tooltip-invert-smaller {
+        top: auto;
+        bottom: 130%;
+    }
+    .technologie .tooltip-invert-smaller:before {
+        top: 100%;
+        bottom: auto;
+        border-color: var(--fourth-color) transparent transparent transparent;
+    }
+    .card-projects-img {
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+        align-items: center;
+        justify-content: center;
+    }
+    .card-projects-img img {
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+    #who-is-info h1 {
+        font-size: 60px;
+        line-height: 50px;
+    }
+    #who-is-info h2 {
+        font-size: 24px;
+    }
+    #who-is-info p {
+        font-size: 16px;
+    }
+    #about-skills {
+        padding: 30px 2px 40px 2px;
+    }
+    #contact-me {
+        padding: 100px 15px 100px 25px;
+        grid-template-columns: 60% 40%;
+    }
+    #contact-inback {
+        width: 103%;
+        height: 102%;
+    }
+    #contact-me form button {
+        width: 40%;
+        margin-top: 10px;
+    }
+    #contact-email {
+        width: 100%;
+    }
+    #contact-link-email {
+        padding: 8px 10px;
+        border: 1px solid var(--complementary-color);
+    }
+    #copy-button {
+        font-size: 16px;
+    }
+    footer {
+        font-size: 14px;
+    }
+}
+@media only screen and (max-width: 540px) {
+    #button-header {
+        width: 50%;
+    }
+    #projects h1 {
+        font-size: 50px;
+        line-height: 50px;
+    }
+    #general-info-about {
+        grid-template-columns: 1fr;
+        grid-template-rows: 49% 48%;
+        gap: 3%;
+        padding: 40px 20px;
+    }
+    #general-info-photo {
+        height: auto;
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+    }
+    #general-info-about img {
+        width: 100%;
+        height: 100%;
+    }
+    #general-info {
+        width: 100%;
+        height: auto;
+        padding: 20px 20px 0px 20px;
+        grid-column: 1 / -1;
+        grid-row: 2 / -1;
+    }
+    #general-info h2 {
+        font-size: 28px;
+    }
+    .contact-break {
+        border: 1px solid var(--third-color);
+        margin: 0;
+        margin: 30px 0 20px 0;
+    }
+    #contact-inback {
+        width: 102%;
+        height: 101%;
+    }
+    #contact-me h1 {
+        font-size: 33px;
+    }
+    #contact-me h2 {
+        font-size: 22px;
+    }
+    #contact-me form button {
+        width: 40%;
+        font-size: 17px;
+        padding: 5px 5px;
+        margin-top: 10px;
+    }
+    #contact-link-email {
+        padding: 8px 6px;
+        font-size: 16px;
+    }
+    #copy-button {
+        font-size: 15px;
+    }
+    #contact-socialmedia {
+        flex-direction: column;
+        align-items: start;
+        gap: 15px;
+        margin: 0;
+    }
+    #container-button-media {
+        width: 100%;
+        justify-content: center;
+        display: flex;
+        gap: 30px;
+    }
+    .media-button:first-child {
+        margin-right: 0px;
+    }
+    .btn {
+        padding: 3px;
+    }
+    .btn svg {
+        transform: scale(0.7);
+    }
+    .btn:hover svg {
+        transform: scale(0.6);
+    }
+}
+@media only screen and (max-width: 510px) {
+    .cards-projects {
+        grid-template-rows: 50% 50%;
+    }
+    .card-projects-info {
+        padding: 0px 10px 25px 15px;
+    }
+    #who-is-mauri {
+        padding: 0;
+        justify-content: auto;
+        align-items: auto;
+        grid-template-rows: repeat(20, 1fr);
+        grid-template-columns: 1fr;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.9) 10%, rgba(0, 0, 0, 0.1) 90%), url(./../Material/photo-who-is.jpg);
+        background-size: cover;
+        background-position: 65% center;
+        background-repeat: no-repeat;
+    }
+    #who-is-info {
+        width: 100%;
+        height: 100%;
+        grid-row: 1 / 8;
+        padding: 50px 20px 0 20px;
+    }
+}
+@media only screen and (max-width: 486px) {
+    .cards-projects {
+        grid-template-rows: 45% 55%;
+    }
+    .technologies-projects {
+        margin-top: 9px;
+    }
+    #about-skills {
+        padding: 35px 2px 45px 2px;
+    }
+    #contact-me {
+        padding: 80px 15px 80px 25px;
+        grid-template-columns: 65% 35%;
+    }
+    #contact-me h1 {
+        font-size: 32px;
+    }
+    #contact-me h2 {
+        font-size: 21px;
+    }
+    #contact-link-email {
+        font-size: 15px;
+    }
+    #copy-button {
+        font-size: 14px;
+    }
+    .btn {
+        padding: 2px;
+    }
+    .btn svg {
+        transform: scale(0.6);
+    }
+    .btn:hover svg {
+        transform: scale(0.5);
+    }
+}
+@media only screen and (max-width: 460px) {
+    #button-header {
+        font-size: 14px;
+        width: 53%;
+    }
+    #who-is-info {
+        grid-row: 1 / 10;
+        padding: 50px 20px 75px 20px;
+    }
+    #general-info-about {
+        grid-template-rows: 45% 52%;
+    }
+    #about-skills {
+        padding: 40px 2px 50px 2px;
+    }
+    #skills-main-title h2 {
+        font-size: 44px;
+    }
+    .kinda-skill {
+        padding: 20px 0 20px 20px;
+    }
+    .kinda-skill h3 {
+        font-size: 22px;
+    }
+    .category-skills {
+        gap: 20px;
+    }
+    .skill-container i {
+        font-size: 27px;
+    }
+    .skill-container p {
+        font-size: 16px;
+    }
+    #contact-me {
+        grid-template-columns: 70% 30%;
+    }
+}
+@media only screen and (max-width: 420px) {
+    #header-first-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #header-content {
+        margin: 15px 30px 0 30px;
+        padding: 0;
+        height: auto;
+    }
+    #button-header {
+        margin-top: 12px;
+        width: 50%;
+    }
+    #image-header {
+        width: 80%;
+        height: auto;
+        margin-left: auto;
+        margin-top: -25px;
+        display: flex;
+    }
+    .card-projects-info h2 {
+        font-size: 27px;
+        line-height: 27px;
+    }
+    .link-projects-webpage {
+        padding: 5px 9px;
+        font-size: 14px;
+    }
+    .link-projects-github {
+        font-size: 25px;
+    }
+    .technologies-projects h4 {
+        font-size: 16px;
+    }
+    .technologie {
+        position: relative;
+        padding: 0 10px 0 10px;
+        font-size: 26px;
+    }
+    #who-is-info {
+        padding: 50px 20px 65px 20px;
+    }
+    #who-is-info h1 {
+        font-size: 55px;
+        line-height: 45px;
+    }
+    #who-is-info h2 {
+        font-size: 22px;
+    }
+    #who-is-info p {
+        font-size: 15px;
+    }
+    #who-is-info p:first-of-type {
+        margin: 5px 0 20px 0;
+    }
+    #general-info h2 {
+        font-size: 26px;
+    }
+    #general-info p {
+        font-size: 16px;
+    }
+    #about-skills {
+        padding: 45px 2px 55px 2px;
+    }
+    .contact-break {
+        margin: 0;
+        margin: 25px 0 20px 0;
+    }
+    #contact-me {
+        grid-template-columns: 75% 25%;
+    }
+    #contact-me h1 {
+        font-size: 30px;
+    }
+    #contact-me h2 {
+        font-size: 20px;
+    }
+    #contact-me form button {
+        font-size: 16px;
+        margin-top: 8px;
+    }
+    #contact-link-email {
+        font-size: 14px;
+    }
+    #copy-button {
+        font-size: 13px;
+    }
+    .btn {
+        padding: 1x;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .cards-projects {
+        grid-template-rows: 40% 60%;
+    }
+    .card-projects-info h2 {
+        font-size: 26px;
+        line-height: 26px;
+    }
+    .technologie span {
+        padding: 8px;
+        font-size: 16px;
+    }
+    #general-info-about {
+        grid-template-rows: 43% 54%;
+    }
+    #general-info h2 {
+        font-size: 24px;
+    }
+    #display-skills {
+        grid-template-columns: 10% 80% 10%;
+    }
+    .kinda-skill {
+        padding: 20px 15px 20px 0px;
+    }
+    .title-of-kinda {
+        padding-left: 15px;
+    }
+    .category-skills {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(
+            auto-fill, 
+            minmax(90px, 1fr)
+        );
+        gap: 15px 0px; 
+    }
+    footer {
+        font-size: 12px;
+    
+    }
+}
+@media only screen and (max-width: 380px) {
+    #header-content h1 {
+        font-size: 45px;
+        line-height: 48px;
+    }
+    #header-content h2 {
+        font-size: 18px;
+        margin: 0;
+    }
+    #button-header {
+        font-size: 12px;
+    }
+    #button-header:hover {
+        font-size: 16px;
+      }
+    #image-header {
+        width: 85%;
+    }
+    #who-is-info {
+        padding: 40px 20px 65px 20px;
+        grid-row: 1 / 11;
+    }
+    #who-is-info h1 {
+        font-size: 50px;
+        line-height: 40px;
+    }
+    #who-is-info h2 {
+        margin-top: 15px;
+    }
+    #who-is-info p:first-of-type {
+        margin: 5px 0 15px 0;
+    }
+    #general-info-about {
+        grid-template-rows: 38% 59%;
+    }
+}
+@media only screen and (max-width: 365px) {
+    .cards-projects {
+        grid-template-rows: 35% 65%;
+    }
+    #general-info-about {
+        grid-template-rows: 34% 63%;
+    }
+    #general-info h2 {
+        font-size: 22px;
+    }
+    #general-info p {
+        font-size: 15px;
+    }
+    #skills-main-title h2 {
+        font-size: 42px;
+    }
+    #display-skills {
+        grid-template-columns: 12% 76% 12%;
+    }
+    .kinda-skill h3 {
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width: 345px) {
+    #who-is-info h1 {
+        font-size: 50px;
+        line-height: 40px;
+    }
+    #who-is-info h2 {
+        font-size: 20px;
+    }
+    #who-is-info p {
+        font-size: 14px;
+    }
+}
+
+
+/* @MEDIA FOR BIGGER SIZES !!!!!!!!!!!!!!!!!!!!!!!!!!! */
+@media only screen and (min-width: 690px) {
+    #button-header {
+        width: 37%;
+        padding: 5px 0;
+        font-size: 17px;
+    }
+    #button-header:hover {
+        font-size: 19px;
+    }
+    #contact-me {
+        grid-template-columns: 57% 43%;
+    }
+}
+@media only screen and (min-width: 760px) {
+    #body {
+        width: 92%;
+    }
+    #header-content {
+        align-self: start;
+        margin-top: 25%;
+    }
+    #button-header {
+        font-size: 18px;
+    }
+    #button-header:hover {
+        font-size: 20px;
+    }
+    .kinda-skill {
+        display: grid;
+        grid-template-columns: 35% 65%;
+        align-items: center;
+        padding: 25px 0 25px 15px;
+    }
+    #data-skills {
+        grid-template-columns: 42% 58%;
+    }
+    #control-skills {
+        grid-template-columns: 45% 55%;
+    }
+    #contact-me {
+        grid-template-columns: 55% 45%;
+    }
+    #contact-me h1 {
+        font-size: 38px;
+        margin: 0 0 15px 0;
+    }
+    footer {
+        height: 150px;
+    }
+}
+@media only screen and (min-width: 830px) {
+    #header-first-content {
+        grid-template-columns: repeat(10, 1fr);
+    }
+    #header-content {
+        grid-column: 1 / 8;
+        margin-top: 20%;
+    }
+    #header-content h1 {
+        font-size: 60px;
+        line-height: 60px;
+    }
+    #header-content h2 {
+        font-size: 24px;
+    }
+    #image-header {
+        grid-column: 5 / -1;
+    }
+    #who-is-mauri {
+        padding: 110px 0 110px 15px;
+    }
+    #general-info-about {
+        grid-template-columns: 52% 45%;
+        padding: 45px 35px 50px 35px;
+    }
+    #general-info h2 {
+        font-size: 28px;
+    }
+    #about-skills {
+        display: grid;
+        grid-template-columns: 17% 81%;
+        padding: 35px 0;
+        gap: 2%;
+    }
+    #skills-main-title {
+        padding-left: 15px;
+    }
+    #skills-main-title h2 {
+        text-align: start;
+    }
+    .kinda-skill {
+        align-items: center;
+        padding: 25px 0 25px 15px;
+    }
+    #data-skills {
+        grid-template-columns: 42% 58%;
+    }
+    #control-skills {
+        grid-template-columns: 45% 55%;
+    }
+    .skill-container {
+        gap: 5px;
+    }
+    #contact-me {
+        padding: 80px 15px 80px 25px;
+    }
+    #contact-inback {
+        width: 102%;
+        height: 101%;
+    }
+    #contact-me h1 {
+        font-size: 40px;
+    }
+    #contact-me h2 {
+        font-size: 26px;
+    }
+    .contact-input {
+        font-size: 14px;
+    }
+    #contact-me form button {
+        width: 30%;
+        font-size: 20px;
+        font-weight: 500;
+    }
+    #contact-link-email {
+        padding: 12px 10px;
+        font-size: 19px;
+        border: 2px solid var(--complementary-color);
+    }
+    #copy-button {
+        font-size: 20px;
+    }
+    #contact-socialmedia {
+        gap: 40px;
+    }
+    #container-button-media {
+        gap: 35px;
+    }
+}
+@media only screen and (min-width: 840px) {
+    #button-header {
+        width: 35%;
+        border: 4px solid var(--sixth-color);
+        font-size: 19px;
+    }
+    .light-theme #button-header {
+        border: 4px solid var(--second-color);
+    }
+    #button-header:hover {
+        font-size: 21px;
+    }
+}
+@media only screen and (min-width: 900px) {
+    #header-content {
+        margin-top: 15%;
+    }
+    #image-header {
+        grid-column: 6 / -1;
+    }
+    #about-skills {
+        padding: 40px 0;
+    }
+    #display-skills {
+        grid-template-columns: 6% 88% 6%;
+    }
+}
+@media only screen and (min-width: 910px) {
+    #button-header {
+        width: 31%;
+        font-size: 20px;
+    }
+    #button-header:hover {
+        font-size: 22px;
+    }
+}
+@media only screen and (min-width: 940px) {
+    #body {
+        width: 94%;
+    }
+    #header-content h1 {
+        font-size: 70px;
+        line-height: 70px;
+    }
+    #header-content h2 {
+        font-size: 26px;
+    }
+    .cards-projects {
+        min-width: 100%;
+        grid-template-columns: 40% 60%;
+    }
+    .card-projects-info {
+        grid-column: 1 / 2;
+        padding: 20px 15px 15px 20px;
+    }
+    .technologie .tooltip-invert {
+        top: 100%;
+        bottom: auto;
+    }
+    .technologie .tooltip-invert:before {
+        top: auto;
+        bottom: 100%;
+        border-color: transparent transparent var(--fourth-color) transparent;
+    }
+    .card-projects-img {
+        grid-column: 2 / -1;
+    }
+    #who-is-mauri {
+        padding: 140px 0 140px 25px;
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9) 15%, rgba(0, 0, 0, 0.1) 80%), url(./../Material/photo-who-is.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    #who-is-info h1 {
+        font-size: 70px;
+        line-height: 60px;
+    }
+    #who-is-info h2 {
+        margin: 25px 0 0 0;
+        font-size: 30px;
+    }
+    #who-is-info p {
+        font-size: 18px;
+    }
+    #general-info h2 {
+        font-size: 30px;
+    }
+    #general-info p {
+        font-size: 18px;
+    }
+    .kinda-skill h3 {
+        font-size: 26px;
+    }
+    #data-skills {
+        grid-template-columns: 45% 55%;
+    }
+    #control-skills {
+        grid-template-columns: 46% 54%;
+    }
+    #contact-me {
+        grid-template-columns: 50% 50%;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    #header-content {
+        margin: 5% 0 0 60px;
+    }
+    #header-content h1 {
+        font-size: 80px;
+        line-height: 80px;
+    }
+    #header-content h2 {
+        font-size: 28px;
+    }
+    #button-header {
+        width: 28%;
+    }
+    #image-header {
+        grid-column: 7 / -1;
+    }
+    #projects h1 {
+        font-size: 70px;
+        margin: 0px 0 50px 0;
+        line-height: 70px;
+    }
+    .card-projects-info h2 {
+        font-size: 32px;
+        line-height: 32px;
+    }
+    .card-projects-info p {
+        font-size: 17px;
+        line-height: 17px;
+    }
+    .link-projects-webpage {
+        padding: 8px 12px;
+        border-radius: 12px;
+        font-size: 18px;
+    }
+    .link-projects-github {
+        font-size: 35px;
+    }
+    .technologie .tooltip-invert {
+        top: 120%;
+    }
+    #general-info-about {
+        grid-template-columns: 48% 49%;
+    }
+    #general-info h2 {
+        font-size: 32px;
+    }
+    #general-info p {
+        font-size: 19px;
+    }
+    #about-skills {
+        padding: 65px 0;
+    }
+    #skills-main-title h2 {
+        font-size: 56px;
+    }
+    #display-skills {
+        grid-template-columns: 5% 90% 5%;
+    }
+    .kinda-skill {
+        grid-template-columns: 32% 68%;
+        padding: 30px 0 30px 20px;
+    }
+    .kinda-skill h3 {
+        font-size: 28px;
+    }
+    #data-skills {
+        grid-template-columns: 42% 58%;
+    }
+    #control-skills {
+        grid-template-columns: 44% 56%;
+    }
+    .category-skills {
+        gap: 35px;
+    }
+    .skill-container {
+        gap: 10px;
+    }
+    .skill-container i {
+        font-size: 42px;
+    }
+    .skill-container p {
+        font-size: 20px;
+    }
+    #contact-me {
+        grid-template-columns: 45% 55%;
+    }
+}
+@media only screen and (min-width: 1090px) {
+    .cards-projects {
+        min-width: 100%;
+    }
+    .card-projects-info {
+        padding: 25px 25px 15px 25px;
+    }
+    .card-projects-info h2 {
+        font-size: 34px;
+        line-height: 34px;
+    }
+    .card-projects-info p {
+        font-size: 19px;
+        line-height: 19px;
+        margin: 10px 0 20px 0;
+    }
+    .technologie .tooltip-invert {
+        top: 130%;
+    }
+    #contact-me {
+        padding: 80px 15px 80px 35px;
+    }
+    #contact-inback {
+        width: 101%;
+        height: 101%;
+    }
+    .contact-input {
+        font-size: 16px;
+    }
+}
+@media only screen and (min-width: 1100px) {
+    #header-content {
+        margin: 5% 0 0 10%;
+    }
+    #header-content h1 {
+        font-size: 90px;
+        line-height: 90px;
+    }
+    #header-content h2 {
+        font-size: 30px;
+    }
+    #general-info-about {
+        grid-template-columns: 47% 50%;
+    }
+    #general-info h2 {
+        font-size: 34px;
+    }
+    #general-info p {
+        font-size: 20px;
+    }
+}
+@media only screen and (min-width: 1175px) {
+    #header-first-content {
+        padding-top: 50px;
+        grid-template-columns: repeat(20, 1fr);
+    }
+    #header-content {
+        margin: 3% 0 0 15%;
+        grid-column: 1 / 18;
+        grid-row: 1 / -1;
+    }
+    #button-header {
+        width: 21%;
+    }
+    #image-header {
+        grid-column: 13 / -1;
+    }
+    .cards-projects {
+        min-width: 100%;
+    }
+    #who-is-mauri {
+        padding: 170px 0 170px 25px;
+        grid-template-columns: 37% 68%;
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9) 22%, rgba(0, 0, 0, 0.1) 70%), url(./../Material/photo-who-is.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    #who-is-info h1 {
+        font-size: 75px;
+        line-height: 65px;
+    }
+    #who-is-info h2 {
+        font-size: 32px;
+    }
+    #who-is-info p {
+        font-size: 19px;
+    }
+    #general-info-about {
+        grid-template-columns: 41% 56%;
+    }
+    #general-info {
+        padding: 30px;
+    }
+    #general-info h2 {
+        font-size: 36px;
+    }
+    #general-info p {
+        font-size: 21px;
+    }
+    #skills-main-title h2 {
+        font-size: 64px;
+    }
+    .kinda-skill {
+        grid-template-columns: 34% 66%;
+        padding: 35px 0 35px 20px;
+    }
+    .kinda-skill h3 {
+        font-size: 32px;
+    }
+    .skill-container i {
+        font-size: 46px;
+    }
+    .skill-container p {
+        font-size: 22px;
+    }
+}
+@media only screen and (min-width: 1250px) {
+    #header-content {
+        margin: 3% 0 0 16%;
+    }
+    #image-header {
+        grid-column: 14 / -1;
+    }
+    .card-projects-info {
+        padding: 25px 15px 15px 25px;
+    }
+    .card-projects-info h2 {
+        font-size: 38px;
+        line-height: 38px;
+    }
+    .card-projects-info p {
+        font-size: 21px;
+        line-height: 21px;
+        margin: 10px 0 20px 0;
+    }
+    .link-projects-webpage {
+        padding: 9px 13px;
+        border-radius: 12px;
+        font-size: 19px;
+    }
+    .link-projects-github {
+        font-size: 40px;
+    }
+    .technologies-projects h4 {
+        font-size: 19px;
+    }
+    .technologie {
+        padding: 0 13px 0 13px;
+        font-size: 32px;
+    }
+    #general-info-about {
+        grid-template-columns: 37% 60%;
+    }
+    #general-info {
+        padding: 40px;
+    }
+    #general-info h2 {
+        font-size: 38px;
+    }
+    #general-info p {
+        font-size: 22px;
+    }
+    #skills-main-title {
+        padding-left: 25px;
+    }
+    #skills-main-title h2 {
+        font-size: 68px;
+    }
+    #display-skills {
+        padding-right: 5px;
+    }
+    .kinda-skill {
+        grid-template-columns: 34% 66%;
+        padding: 35px 0 35px 35px;
+    }
+    #contact-me {
+        padding: 80px 15px 80px 45px;
+    }
+}
+@media only screen and (min-width: 1325px) {
+    #button-header {
+        width: 18%;
+        padding: 6px 0;
+        font-size: 22px;
+    }
+    #button-header:hover {
+        font-size: 24px;
+    }
+    .cards-projects {
+        grid-template-columns: 45% 55%;
+    }
+    .kinda-skill {
+        grid-template-columns: 32% 68%;
+    }
+    #data-skills {
+        grid-template-columns: 40% 60%;
+    }
+    #control-skills {
+        grid-template-columns: 42% 58%;
+    }
+}
+@media only screen and (min-width: 1375px) {
+    #projects {
+        padding: 80px 0px 110px 0;
+    }
+    #who-is-info h1 {
+        font-size: 80px;
+        line-height: 70px;
+    }
+    #who-is-info h2 {
+        font-size: 34px;
+    }
+    #who-is-info p {
+        font-size: 20px;
+    }
+    #general-info-about {
+        grid-template-columns: 33% 64%;
+    }
+    .kinda-skill {
+        grid-template-columns: 30% 70%;
+    }
+    #data-skills {
+        grid-template-columns: 38% 62%;
+    }
+    #control-skills {
+        grid-template-columns: 40% 60%;
+    }
+}
+@media only screen and (min-width: 1400px) {
+    #header-content {
+        margin: 8% 0% 0 8%;
+    }
+    #header-content h1 {
+        font-size: 120px;
+        margin-bottom: 10px;
+    }
+    #header-content h2 {
+        font-size: 35px;
+    }
+    #image-header {
+        grid-column: 14 / -1;
+    }
+    .cards-projects {
+        grid-template-columns: 50% 50%;
+    }
+    #general-info-about {
+        grid-template-columns: 29% 68%;
+    }
+    #contact-me {
+        padding: 80px 15px 80px 55px;
+    }
+}
+@media only screen and (min-width: 1420px) {
+    #header-content {
+        margin: 7% 0% 0 8%;
+    }
+    #header-content h1 {
+        font-size: 130px;
+    }
+    #button-header {
+        width: 16%;
+        padding: 6px 0;
+    }
+    #image-header {
+        grid-column: 15 / -1;
+    }
+    .cards-projects {
+        grid-template-columns: 60% 40%;
+    }
+    .card-projects-info {
+        padding: 35px 35px 15px 40px;
+    }
+    #general-info-about {
+        grid-template-columns: 27% 70%;
+        padding: 45px 45px 50px 45px;
+    }
+    #skills-main-title {
+        padding-left: 35px;
+    }
+    .kinda-skill {
+        grid-template-columns: 27% 73%;
+    }
+    #data-skills {
+        grid-template-columns: 34% 66%;
+    }
+    #control-skills {
+        grid-template-columns: 36% 64%;
+    }
+}
+
+/* @KEYFRAMES !!!!!!!!!!!!!!!*/
+@keyframes scroll-way {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+        display: grid
+    }
+}
